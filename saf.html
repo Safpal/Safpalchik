@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        button {
+            padding: 10px 20px;S
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        .output {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Page</h1>
+        <input type="text" id="userInput" placeholder="Enter some text">
+        <button onclick="displayText()">Submit</button>
+        <div class="output" id="output"></div>
+    </div>
+
+    <script>
+        function displayText() {
+            const input = document.getElementById('userInput').value;
+            const output = document.getElementById('output');
+            output.textContent = input;
+        }
+    </script>
+</body>
+</html>
